@@ -37,16 +37,18 @@ function Header() {
         </div>
       </div>
    
-    <header className="border-b border-gray-100 px-14 py-4 bg-white shadow-sm">
+    <header className="border-b border-gray-100 md:px-14 md:py-4 py-1 px-4 bg-white shadow-sm">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo + Toggle Button */}
-        <div className="flex items-center gap-2 cursor-pointer" onClick={toggleMenu}>
+        <div className="flex  max-[768px]:w-full max-[768px]:justify-between items-center gap-2 cursor-pointer" onClick={toggleMenu}>
+          <div className="flex items-center gap-2">
           <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
             <Layers className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-bold text-gray-900">EduQuest</span>
-          <span className="md:hidden ml-2">
-            {menuOpen ? <X className="w-5 h-5 text-gray-800" /> : <Menu className="w-5 h-5 text-gray-800" />}
+          </div>
+          <span className=" md:hidden ml-2">
+            {menuOpen ? <X className="w-5 h-5 text-gray-800" /> : <Menu className="w-5 h-5 text-gray-800" />} 
           </span>
         </div>
 
